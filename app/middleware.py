@@ -1,7 +1,8 @@
 import time
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.requests import Request
-from app import monitor
+
+import monitor
 
 
 class MonitoringMiddleware(BaseHTTPMiddleware):
@@ -13,6 +14,5 @@ class MonitoringMiddleware(BaseHTTPMiddleware):
         is_error = response.status_code >= 400
         monitor.record_request(duration_ms, is_error)
 
-        # response header mein time daal do
         response.headers["X-Response-Time"] = f"{duration_ms:.2f}ms"
         return response

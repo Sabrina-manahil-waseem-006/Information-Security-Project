@@ -3,15 +3,14 @@ from fastapi.responses import JSONResponse
 import asyncio
 import time
 
-from app import monitor
-from app.middleware import MonitoringMiddleware
+import monitor
+from middleware import MonitoringMiddleware
 
 app = FastAPI(title="Resource-Aware DDoS Mitigation Service")
 
-# Middleware add karo
 app.add_middleware(MonitoringMiddleware)
 
-# Startup pe CSV initialize karo
+
 @app.on_event("startup")
 async def startup():
     monitor.init_csv()
@@ -19,7 +18,6 @@ async def startup():
 
 
 async def background_metrics_logger():
-    """Har 1 second metrics CSV mein likho"""
     while True:
         metrics = monitor.get_metrics()
         monitor.save_metrics_to_csv(metrics)
@@ -38,5 +36,4 @@ async def health():
 
 @app.get("/metrics")
 async def metrics():
-    """Latest metrics JSON mein return karo"""
     return JSONResponse(monitor.get_metrics())

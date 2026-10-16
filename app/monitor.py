@@ -6,19 +6,16 @@ from datetime import datetime
 
 METRICS_FILE = "data/metrics.csv"
 
-# Counters
 request_count = 0
 error_count = 0
 response_times = []
 
-# Last RPS calculation
 last_rps_time = time.time()
 last_request_count = 0
 current_rps = 0
 
 
 def init_csv():
-    """CSV file banao agar nahi hai to"""
     os.makedirs("data", exist_ok=True)
     if not os.path.exists(METRICS_FILE):
         with open(METRICS_FILE, "w", newline="") as f:
@@ -30,19 +27,16 @@ def init_csv():
 
 
 def record_request(response_time_ms: float, is_error: bool):
-    """Har request pe call hoga middleware se"""
     global request_count, error_count
     request_count += 1
     if is_error:
         error_count += 1
     response_times.append(response_time_ms)
-    # sirf last 100 response times rakho
     if len(response_times) > 100:
         response_times.pop(0)
 
 
 def get_metrics():
-    """Current metrics return karo"""
     global last_rps_time, last_request_count, current_rps
 
     now = time.time()
@@ -74,7 +68,6 @@ def get_metrics():
 
 
 def save_metrics_to_csv(metrics: dict):
-    """Metrics CSV mein append karo"""
     with open(METRICS_FILE, "a", newline="") as f:
         writer = csv.writer(f)
         writer.writerow([
