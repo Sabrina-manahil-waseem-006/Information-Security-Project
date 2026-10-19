@@ -1,4 +1,4 @@
-from app.detector_config import THRESHOLDS
+from detector_config import THRESHOLDS        # ✅
 
 def detect(metrics: dict) -> dict:
     score = 0
@@ -7,7 +7,7 @@ def detect(metrics: dict) -> dict:
     rps = metrics.get("rps", 0)
     cpu = metrics.get("cpu_percent", 0)
     ram = metrics.get("ram_percent", 0)
-    latency = metrics.get("avg_response_time_ms", 0)
+    latency = metrics.get("response_time_ms", 0) 
     err = metrics.get("error_rate", 0)
 
     if rps > THRESHOLDS["rps_critical"]:

@@ -3,7 +3,7 @@ import requests
 import csv
 import os
 from datetime import datetime
-from app.detector import detect
+from detector import detect          # ✅
 
 METRICS_URL = "http://localhost:8000/metrics"
 LOG_FILE = "data/detections.csv"

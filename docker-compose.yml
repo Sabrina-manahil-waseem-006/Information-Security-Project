@@ -1,9 +1,31 @@
 services:
   app:
     build: ./app
-    container_name: app
     ports:
       - "8000:8000"
     volumes:
       - ./data:/app/data
+    environment:
+      - MITIGATION_ENABLED=${MITIGATION_ENABLED:-true}
     restart: unless-stopped
+
+  locust:
+    build:
+      context: ./locust
+      dockerfile: Dockerfile
+    ports:
+      - "8089:8089"
+    command: >
+      -f /mnt/locust/locustfile.py
+      --host http://app:8000
+    depends_on:
+      - app
+    volumes:
+      - ./results:/mnt/locust/results
+    environment:
+      - HTTP_PROXY=
+      - HTTPS_PROXY=
+      - http_proxy=
+      - https_proxy=
+      - NO_PROXY=*
+      - no_proxy=*

@@ -1,0 +1,129 @@
+timestamp,level,reason
+2026-10-19T14:53:33.681743,light,detection=medium; CPU=20%
+2026-10-19T14:53:38.684741,none,normal / mitigation disabled
+2026-10-19T14:54:52.152992,light,detection=medium; CPU=20%
+2026-10-19T14:54:57.158710,none,normal / mitigation disabled
+2026-10-19T14:54:58.174817,light,detection=medium; CPU=20%
+2026-10-19T14:55:03.192258,none,normal / mitigation disabled
+2026-10-19T14:55:04.218895,light,detection=medium; CPU=0%
+2026-10-19T14:55:08.256146,moderate,detection=medium; CPU=60%
+2026-10-19T14:55:09.256800,aggressive,detection=medium; CPU=80%
+2026-10-19T14:55:09.267891,aggressive,IP 172.18.0.1 blocked for 60s
+2026-10-19T14:55:16.272952,none,normal / mitigation disabled
+2026-10-19T14:55:17.273221,aggressive,detection=medium; CPU=93%
+2026-10-19T14:55:22.317436,none,normal / mitigation disabled
+2026-10-19T14:55:38.364295,light,detection=medium; CPU=20%
+2026-10-19T14:55:43.384250,none,normal / mitigation disabled
+2026-10-19T14:55:48.409025,light,detection=medium; CPU=20%
+2026-10-19T14:55:53.459597,none,normal / mitigation disabled
+2026-10-19T14:56:02.546719,light,detection=medium; CPU=20%
+2026-10-19T14:56:07.560441,none,normal / mitigation disabled
+2026-10-19T14:56:09.668229,light,detection=low; CPU=20%
+2026-10-19T14:56:15.692700,none,normal / mitigation disabled
+2026-10-19T14:56:16.740330,light,detection=medium; CPU=40%
+2026-10-19T14:56:21.764433,none,normal / mitigation disabled
+2026-10-19T14:56:22.824668,light,detection=medium; CPU=0%
+2026-10-19T14:56:27.857634,none,normal / mitigation disabled
+2026-10-19T14:56:28.887365,light,detection=medium; CPU=0%
+2026-10-19T14:56:33.900370,none,normal / mitigation disabled
+2026-10-19T14:56:49.911707,light,detection=medium; CPU=20%
+2026-10-19T14:56:54.914517,none,normal / mitigation disabled
+2026-10-19T14:56:57.917297,light,detection=medium; CPU=20%
+2026-10-19T14:57:03.921131,none,normal / mitigation disabled
+2026-10-19T14:57:04.921858,moderate,detection=medium; CPU=60%
+2026-10-19T14:57:05.921860,aggressive,detection=medium; CPU=80%
+2026-10-19T14:57:10.926269,none,normal / mitigation disabled
+2026-10-19T14:57:11.927341,light,detection=medium; CPU=20%
+2026-10-19T14:57:16.929791,none,normal / mitigation disabled
+2026-10-19T14:57:23.935737,light,detection=medium; CPU=20%
+2026-10-19T14:57:28.936944,none,normal / mitigation disabled
+2026-10-19T14:57:40.946620,light,detection=medium; CPU=20%
+2026-10-19T14:57:45.947768,none,normal / mitigation disabled
+2026-10-19T14:58:08.960764,light,detection=medium; CPU=20%
+2026-10-19T14:58:13.962456,none,normal / mitigation disabled
+2026-10-19T14:58:23.969049,light,detection=medium; CPU=20%
+2026-10-19T14:58:28.971757,none,normal / mitigation disabled
+2026-10-19T14:58:29.972623,light,detection=medium; CPU=20%
+2026-10-19T14:58:34.974083,none,normal / mitigation disabled
+2026-10-19T14:58:41.979059,light,detection=medium; CPU=20%
+2026-10-19T14:58:46.981834,none,normal / mitigation disabled
+2026-10-19T14:58:52.987036,light,detection=medium; CPU=20%
+2026-10-19T14:58:58.992579,none,normal / mitigation disabled
+2026-10-19T14:59:01.993863,light,detection=medium; CPU=40%
+2026-10-19T14:59:06.998010,none,normal / mitigation disabled
+2026-10-19T14:59:07.998616,light,detection=medium; CPU=20%
+2026-10-19T14:59:13.004537,none,normal / mitigation disabled
+2026-10-19T14:59:24.008083,light,detection=medium; CPU=30%
+2026-10-19T14:59:30.007614,none,normal / mitigation disabled
+2026-10-19T14:59:37.013649,light,detection=medium; CPU=20%
+2026-10-19T14:59:42.018670,none,normal / mitigation disabled
+2026-10-19T14:59:53.027770,light,detection=medium; CPU=20%
+2026-10-19T14:59:59.039868,none,normal / mitigation disabled
+2026-10-19T15:00:00.039846,moderate,detection=medium; CPU=60%
+2026-10-19T15:00:05.043604,none,normal / mitigation disabled
+2026-10-19T15:00:21.055965,light,detection=medium; CPU=20%
+2026-10-19T15:00:26.058474,none,normal / mitigation disabled
+2026-10-19T15:00:48.069548,light,detection=medium; CPU=20%
+2026-10-19T15:00:53.071788,none,normal / mitigation disabled
+2026-10-19T15:01:22.091070,light,detection=medium; CPU=20%
+2026-10-19T15:01:27.093012,none,normal / mitigation disabled
+2026-10-19T15:01:37.098829,light,detection=medium; CPU=20%
+2026-10-19T15:01:42.100616,none,normal / mitigation disabled
+2026-10-19T15:01:47.102667,light,detection=medium; CPU=20%
+2026-10-19T15:01:52.108323,none,normal / mitigation disabled
+2026-10-19T15:01:56.111851,light,detection=medium; CPU=20%
+2026-10-19T15:02:01.113084,none,normal / mitigation disabled
+2026-10-19T15:02:18.125701,light,detection=medium; CPU=20%
+2026-10-19T15:02:23.129676,none,normal / mitigation disabled
+2026-10-19T15:02:25.131897,light,detection=medium; CPU=20%
+2026-10-19T15:02:30.135439,none,normal / mitigation disabled
+2026-10-19T15:02:38.138806,light,detection=medium; CPU=20%
+2026-10-19T15:02:43.140046,none,normal / mitigation disabled
+2026-10-19T15:03:27.164546,light,detection=medium; CPU=20%
+2026-10-19T15:03:32.168073,none,normal / mitigation disabled
+2026-10-19T15:03:35.168897,light,detection=medium; CPU=20%
+2026-10-19T15:03:40.171067,none,normal / mitigation disabled
+2026-10-19T15:04:09.189933,light,detection=medium; CPU=20%
+2026-10-19T15:04:14.190978,none,normal / mitigation disabled
+2026-10-19T15:04:15.190766,light,detection=medium; CPU=20%
+2026-10-19T15:04:20.193000,none,normal / mitigation disabled
+2026-10-19T15:04:46.208821,light,detection=medium; CPU=20%
+2026-10-19T15:04:51.212491,none,normal / mitigation disabled
+2026-10-19T15:04:52.213502,light,detection=medium; CPU=20%
+2026-10-19T15:04:57.216000,none,normal / mitigation disabled
+2026-10-19T15:05:20.234647,light,detection=medium; CPU=20%
+2026-10-19T15:05:25.236614,none,normal / mitigation disabled
+2026-10-19T15:05:31.241738,light,detection=medium; CPU=20%
+2026-10-19T15:05:36.245071,none,normal / mitigation disabled
+2026-10-19T15:05:41.249811,light,detection=medium; CPU=20%
+2026-10-19T15:05:46.253428,none,normal / mitigation disabled
+2026-10-19T15:06:43.288737,light,detection=medium; CPU=20%
+2026-10-19T15:06:48.290408,none,normal / mitigation disabled
+2026-10-19T15:07:10.305945,light,detection=medium; CPU=20%
+2026-10-19T15:07:15.312409,none,normal / mitigation disabled
+2026-10-19T15:07:32.322769,light,detection=medium; CPU=20%
+2026-10-19T15:07:38.329838,none,normal / mitigation disabled
+2026-10-19T15:07:44.333833,light,detection=medium; CPU=20%
+2026-10-19T15:07:49.337845,none,normal / mitigation disabled
+2026-10-19T15:07:50.338694,light,detection=medium; CPU=40%
+2026-10-19T15:07:55.343167,none,normal / mitigation disabled
+2026-10-19T15:07:56.344625,light,detection=medium; CPU=20%
+2026-10-19T15:08:03.350957,moderate,detection=medium; CPU=60%
+2026-10-19T15:08:08.353052,none,normal / mitigation disabled
+2026-10-19T15:08:17.358551,light,detection=medium; CPU=30%
+2026-10-19T15:08:22.360632,none,normal / mitigation disabled
+2026-10-19T15:09:18.398881,light,detection=medium; CPU=20%
+2026-10-19T15:09:23.402407,none,normal / mitigation disabled
+2026-10-19T15:09:34.408351,light,detection=medium; CPU=20%
+2026-10-19T15:09:39.411959,none,normal / mitigation disabled
+2026-10-19T15:09:48.419361,light,detection=medium; CPU=20%
+2026-10-19T15:09:53.421618,none,normal / mitigation disabled
+2026-10-19T15:10:01.427253,light,detection=medium; CPU=40%
+2026-10-19T15:10:06.429967,none,normal / mitigation disabled
+2026-10-19T15:10:11.431020,moderate,detection=medium; CPU=63%
+2026-10-19T15:10:16.432164,none,normal / mitigation disabled
+2026-10-19T15:10:22.434498,light,detection=medium; CPU=30%
+2026-10-19T15:10:23.435576,moderate,detection=medium; CPU=50%
+2026-10-19T15:10:28.437490,none,normal / mitigation disabled
+2026-10-19T15:10:57.455993,light,detection=medium; CPU=20%
+2026-10-19T15:11:02.458991,none,normal / mitigation disabled
