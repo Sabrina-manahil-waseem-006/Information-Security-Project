@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+app/data/
+frontend/node_modules/
+frontend/dist/
+frontend/src_backup/
+.env
+.env.*
+!.env.example
+frontend/src-backup/

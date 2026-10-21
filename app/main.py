@@ -9,6 +9,8 @@ from mitigation_middleware import MitigationMiddleware
 from mitigation import choose_level, state
 from detector import detect
 
+from mitigation import is_enabled, LEVELS
+
 app = FastAPI(title="Resource-Aware DDoS Mitigation Service")
 
 # Order matters: LAST added = FIRST to run on each request.
@@ -66,3 +68,20 @@ async def health():
 @app.get("/metrics")
 async def metrics():
     return JSONResponse(monitor.get_metrics())
+
+@app.get("/detection")
+async def detection_status():
+    metrics = monitor.get_metrics()
+    return detect(metrics)
+
+@app.get("/mitigation/status")
+async def mitigation_status():
+    level, reason = state.get()
+
+    return {
+        "enabled": is_enabled(),
+        "level": level,
+        "reason": reason,
+        "rate_limit": LEVELS[level]["rate_limit"],
+        "last_updated": state.last_updated
+    }
