@@ -9,7 +9,7 @@ from mitigation_middleware import MitigationMiddleware
 from mitigation import choose_level, state
 from detector import detect
 
-from mitigation import is_enabled, LEVELS
+from mitigation import is_enabled, set_enabled, LEVELS
 
 app = FastAPI(title="Resource-Aware DDoS Mitigation Service")
 
@@ -85,3 +85,79 @@ async def mitigation_status():
         "rate_limit": LEVELS[level]["rate_limit"],
         "last_updated": state.last_updated
     }
+
+from fastapi import Request, HTTPException
+
+def require_local_request(request: Request):
+    """Allow mitigation controls only from local machine."""
+    if request.client is None or request.client.host not in (
+        "127.0.0.1", "::1"
+    ):
+        raise HTTPException(
+            status_code=403,
+            detail="Mitigation controls are restricted to localhost"
+        )
+
+
+@app.post("/mitigation/enable")
+async def enable_mitigation(request: Request):
+    require_local_request(request)
+
+    set_enabled(True)
+
+    return {
+        "success": True,
+        "enabled": is_enabled(),
+        "message": "Mitigation enabled"
+    }
+
+
+@app.post("/mitigation/disable")
+async def disable_mitigation(request: Request):
+    require_local_request(request)
+
+    set_enabled(False)
+
+    return {
+        "success": True,
+        "enabled": is_enabled(),
+        "message": "Mitigation disabled"
+    }
+
+
+from pydantic import BaseModel
+from simulation import (
+    start_simulation,
+    stop_simulation,
+    get_status,
+)
+
+
+class SimulationRequest(BaseModel):
+    mode: str
+
+
+@app.get("/simulation/status")
+async def simulation_status():
+    return get_status()
+
+
+@app.post("/simulation/start")
+async def simulation_start(
+    body: SimulationRequest,
+    request: Request
+):
+    require_local_request(request)
+
+    try:
+        return start_simulation(body.mode)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except RuntimeError as e:
+        raise HTTPException(status_code=409, detail=str(e))
+
+
+@app.post("/simulation/stop")
+async def simulation_stop(request: Request):
+    require_local_request(request)
+    return stop_simulation()

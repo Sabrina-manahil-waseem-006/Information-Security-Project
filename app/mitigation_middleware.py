@@ -13,6 +13,9 @@ from mitigation import state, limiter, LEVELS, is_enabled         # ✅
 EXEMPT_PATHS = {
     "/metrics",
     "/health",
+    "/detection",
+    "/mitigation/status",
+    "/simulation/status",
     "/docs",
     "/openapi.json",
     "/redoc",
